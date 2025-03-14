@@ -158,14 +158,14 @@ export default function Statistics() {
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="text-lg font-bold">Ranking Points</CardTitle>
               <Select
-                value={selectedRankingId || ""}
-                onValueChange={(value) => setSelectedRankingId(value || null)}
+                value={selectedRankingId || "all"}
+                onValueChange={(value) => setSelectedRankingId(value === "all" ? null : value)}
               >
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="All rankings" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All rankings</SelectItem>
+                  <SelectItem value="all">All rankings</SelectItem>
                   {rankings?.map((ranking) => (
                     <SelectItem key={ranking.id} value={ranking.id.toString()}>
                       {ranking.name}
