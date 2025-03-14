@@ -57,7 +57,7 @@ function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
       {user && <Header />}
-      <main className="flex-grow pb-20">{children}</main>
+      <main className="flex-grow pb-20 md:pb-6">{children}</main>
       {user && <BottomNavigation />}
     </div>
   );

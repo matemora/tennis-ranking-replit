@@ -50,7 +50,7 @@ const BottomNavigation = () => {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-3 px-6 sm:px-10 z-10">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-3 px-6 sm:px-10 z-10">
       <nav className="flex justify-between items-center max-w-screen-lg mx-auto">
         {navItems.map((item) => {
           // Skip admin items for non-admins
